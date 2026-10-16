@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Examen Toxicológico — Laboratorio Chopo</title>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #f0f0f0;
+            padding: 20px;
+            color: #000000;
+            line-height: 1.6;
+        }
+        .download-container {
+            max-width: 850px;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        #downloadBtn {
+            background: #006699;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        #downloadBtn:hover {
+            background: #005580;
+        }
+        #downloadBtn:disabled {
+            background: #999;
+            cursor: not-allowed;
+        }
+        .document-wrapper {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        #document {
+            background: #ffffff;
+            padding: 30px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #006699;
+            padding-bottom: 15px;
+        }
+        .logo-section h1 {
+            font-size: 28px;
+            color: #006699;
+            font-weight: bold;
+        }
+        .logo-section p {
+            font-size: 14px;
+            color: #333;
+            font-style: italic;
+        }
+        .order-info {
+            text-align: right;
+            font-size: 14px;
+        }
+        .order-info strong {
+            font-size: 16px;
+            color: #006699;
+        }
+        .patient-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .patient-info p {
+            margin: 4px 0;
+        }
+        .section-title {
+            background: #006699;
+            color: #fff;
+            padding: 8px 15px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 25px 0 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: #f0f0f0;
+            font-weight: bold;
+        }
+        .no-reactiv {
+            font-weight: bold;
+            color: #008833;
+        }
+        .notes {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 3px solid #006699;
+            font-size: 13px;
+            margin: 20px 0;
+        }
+        .signature-section {
+            margin-top: 50px;
+            text-align: right;
+            font-size: 13px;
+        }
+        .qrcode-area {
+            text-align: center;
+            margin: 30px 0 20px;
+        }
+        .qrcode-box {
+            display: inline-block;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background: #fff;
+        }
+        h3 {
+            font-size: 15px;
+            margin-top: 30px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-container">
+        <button id="downloadBtn" onclick="descargarComoImagen()">📸 Descargar como Imagen</button>
+    </div>
+
+    <div class="document-wrapper" id="document">
+
+        <div class="header-top">
+            <div class="logo-section">
+                <h1>CHOPO</h1>
+                <p>Porque tu salud es lo primero</p>
+            </div>
+            <div class="order-info">
+                <p><strong>Orden: IR0178159</strong></p>
+                <p>ID Paciente: 14545410</p>
+                <p style="font-size: 16px; font-weight: bold; margin-top: 10px;">Resultados<br>Análisis Clínicos</p>
+            </div>
+        </div>
+
+        <div class="patient-info">
+            <div>
+                <p><strong>Paciente:</strong> SERGIO SÁNCHEZ JIMÉNEZ</p>
+                <p><strong>Fecha de nacimiento:</strong> 18 de septiembre de 1994</p>
+                <p><strong>Fecha:</strong> 14/octubre/2026 — 13:28:48 hrs</p>
+                <p><strong>Dirigido a:</strong> A QUIEN CORRESPONDA</p>
+            </div>
+            <div>
+                <p><strong>Sexo:</strong> Masculino</p>
+                <p><strong>Edad:</strong> 32 Años</p>
+                <p><strong>Hoja:</strong> 1 de 1</p>
+            </div>
+        </div>
+
+        <div class="section-title">BÚSQUEDA DE 3 DROGAS EN ORINA</div>
+        
+        <table>
+            <tr>
+                <th>Prueba</th>
+                <th>Resultado</th>
+                <th>Límites de referencia</th>
+            </tr>
+            <tr>
+                <td>Anfetaminas/Metanfetaminas</td>
+                <td class="no-reactiv">No Reactivo</td>
+                <td>No reactivo</td>
+            </tr>
+            <tr>
+                <td>Cannabinoides</td>
+                <td class="no-reactiv">No Reactivo</td>
+                <td>No reactivo</td>
+            </tr>
+            <tr>
+                <td>Cocaína</td>
+                <td class="no-reactiv">No Reactivo</td>
+                <td>No reactivo</td>
+            </tr>
+        </table>
+
+        <div class="notes">
+            <strong>Interpretación de Resultados:</strong><br>
+            Criterios establecidos según Substance Abuse and Mental Health Service Administration (SAMHSA).<br><br>
+            <strong>NOTAS:</strong><br>
+            El presente resultado es presuntivo y tiene utilidad clínica. Cualquier resultado Reactivo no confirmado, solo debe ser utilizado con fines médicos.<br><br>
+            En caso de requerir la prueba confirmatoria solicitarla al Laboratorio de manera expresa y sobre la misma muestra.<br>
+            * Las muestras reactivas se almacenan en el laboratorio por dos meses y las no reactivas por tres días.<br><br>
+            <strong>Método:</strong> Inmunocromatográfico
+        </div>
+
+        <h3>Sustancia analizada — Método — Resultado — Límite de corte</h3>
+        
+        <table>
+            <tr>
+                <th>Sustancia analizada</th>
+                <th>Método</th>
+                <th>Resultado</th>
+                <th>Límite de corte</th>
+            </tr>
+            <tr>
+                <td>Cocaína</td>
+                <td>Inmunocromatografía</td>
+                <td>&lt; 150 ng/mL</td>
+                <td>150 ng/mL</td>
+            </tr>
+            <tr>
+                <td>Tetrahidrocannabinol (THC)</td>
+                <td>Inmunocromatografía</td>
+                <td>&lt; 15 ng/mL</td>
+                <td>15 ng/mL</td>
+            </tr>
+            <tr>
+                <td>Anfetaminas</td>
+                <td>Inmunocromatografía</td>
+                <td>&lt; 500 ng/mL</td>
+                <td>500 ng/mL</td>
+            </tr>
+            <tr>
+                <td>Opiáceos</td>
+                <td>Inmunocromatografía</td>
+                <td>&lt; 300 ng/mL</td>
+                <td>300 ng/mL</td>
+            </tr>
+            <tr>
+                <td>Benzodiacepinas</td>
+                <td>Inmunocromatografía</td>
+                <td>&lt; 300 ng/mL</td>
+                <td>300 ng/mL</td>
+            </tr>
+            <tr>
+                <td>Metanfetaminas</td>
+                <td>Inmunocromatografía</td>
+                <td>&lt; 500 ng/mL</td>
+                <td>500 ng/mL</td>
+            </tr>
+        </table>
+
+        <div class="qrcode-area">
+            <p style="font-size: 13px; margin-bottom: 10px;">Escanea para verificar resultados:</p>
+            <div class="qrcode-box">
+                <p style="font-size: 12px; color: #666;">[ Código QR — chopo.mx/verifica/IR0178159 ]</p>
+            </div>
+        </div>
+
+        <div class="signature-section">
+            <p><strong>INFORME FINAL ENVIADO POR CORREO ELECTRÓNICO</strong></p>
+            <br>
+            <p>Responsable del Laboratorio de Análisis Clínicos</p>
+            <p>Q.F.B. Ana Gabriela Paredes Aguirre</p>
+            <p>Benemérita Universidad Autónoma de Puebla · Cédula Profesional: 9118979</p>
+            <br>
+            <p style="font-size: 11px; color: #666;">Acreditación ema: CDMx No: CL-001, GDL No: CL-030, GTO No: CL-094, QRO No: CL-095<br>
+            PUE No: CL-114, MTY No: CL-131<br>
+            "Consulte el alcance de la acreditación en la siguiente liga: www.ema.org.mx"</p>
+            <br>
+            <p style="font-size: 11px; color: #666;">GRUPO DIAGNÓSTICO MÉDICO PROA S.A. DE C.V.<br>
+            ORION PONIENTE 501 LOC. 2, COL. CIUDAD JUDICIAL SIGLO XXI, C.P. 72810<br>
+            SAN ANDRÉS CHOLULA, PUEBLA · www.chopo.com.mx</p>
+        </div>
+
+    </div>
+
+    <script>
+        async function descargarComoImagen() {
+            const boton = document.getElementById('downloadBtn');
+            boton.disabled = true;
+            boton.textContent = 'Generando imagen...';
+
+            try {
+                const elemento = document.getElementById('document');
+                const canvas = await html2canvas(elemento, {
+                    scale: 2,
+                    useCORS: true,
+                    backgroundColor: '#ffffff'
+                });
+
+                const enlace = document.createElement('a');
+                enlace.download = 'Resultado-Toxicologico-Sergio-Sanchez.png';
+                enlace.href = canvas.toDataURL('image/png');
+                enlace.click();
+
+                boton.textContent = '✅ ¡Descargado!';
+                setTimeout(() => {
+                    boton.textContent = '📸 Descargar como Imagen';
+                    boton.disabled = false;
+                }, 2000);
+            } catch (error) {
+                alert('Error al generar la imagen. Intenta de nuevo.');
+                boton.textContent = '📸 Descargar como Imagen';
+                boton.disabled = false;
+            }
+        }
+    </script>
+
+</body>
+</html>
